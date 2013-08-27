@@ -31,8 +31,8 @@ Then run your tests as normal but define `DEBUG=1`.
 
 ## Todo
 
-- [ ] Stop in the failed test. e.g. at an assert call.
-- [ ] Stop on errors.
+- Stop in the failed test. e.g. at an assert call.
+- Stop on errors.
 
 ## Credits
 
@@ -40,6 +40,6 @@ Distributed with an MIT License.
 
 Contributions more than welcome.
 
-Made by Kasper Timm Hansen
-GitHub: [@kaspth](https://github.com/kaspth)
-Twitter: [@kaspth](https://twitter.com/kaspth)
+Made by Kasper Timm Hansen.
+GitHub: [@kaspth](https://github.com/kaspth).
+Twitter: [@kaspth](https://twitter.com/kaspth).
