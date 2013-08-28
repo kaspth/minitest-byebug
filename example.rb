@@ -1,4 +1,4 @@
-require 'minitest/byebug' if ENV["DEBUG"]
+require File.expand_path('lib/minitest/byebug') if ENV["DEBUG"]
 require 'minitest/autorun'
 
 class TestMiniTestUnitTestCase < Minitest::Test
@@ -20,6 +20,11 @@ class TestMiniTestUnitTestCase < Minitest::Test
 
   def bad
     raise "no"
+  end
+
+  def test_skip_does_nothing
+    skip "Do run me"
+    raise "HELL"
   end
 
   def test_assert_error
