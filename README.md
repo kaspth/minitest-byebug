@@ -32,6 +32,7 @@ Then run your tests as normal but define `DEBUG=1`.
 ## Todo
 
 - Stop in the failed test. e.g. at an assert call.
+    - Workaround: when the session starts, `up 3` will take you to the test failure.
 - Stop on errors.
 
 ## Credits
