@@ -6,6 +6,10 @@ require 'minitest/test'
 module Minitest::Byebug
   VERSION = "0.0.1"
 
+  def skip(msg = nil, bt = caller)
+    super unless ENV['NO_SKIP']
+  end
+
   def assert(test, msg = nil)
     begin
       super

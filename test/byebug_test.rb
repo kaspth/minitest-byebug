@@ -4,18 +4,24 @@ require 'minitest/autorun'
 class ByebugTest < Minitest::Test
 
   def setup
-    ENV['DEBUG'] = nil
+    ENV['NO_SKIP'] = nil
   end
 
   def test_skip_without_debug_set
-    skip
-    raise RuntimeError
+    assert_raises(Minitest::Skip) do
+      skip_helper
+    end
   end
 
   def test_skip_does_nothing_if_debug_is_set
-    ENV['DEBUG'] = '1'
+    ENV['NO_SKIP'] = '1'
     assert_raises(RuntimeError) do
-      test_skip_without_debug_set
+      skip_helper
     end
+  end
+
+  def skip_helper
+    skip
+    raise RuntimeError
   end
 end
