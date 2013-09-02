@@ -19,6 +19,18 @@ module Minitest::Byebug
       raise e
     end
   end
+
+  def self.included(base)
+    base.send :alias_method, :kapture_exceptions, :capture_exceptions
+    base.send :define_method, :capture_exceptions do |&block|
+      begin
+        block.call
+      rescue => e
+        byebug 9
+        kapture_exceptions(&block)
+      end
+    end
+  end
 end
 
 class Minitest::Test
