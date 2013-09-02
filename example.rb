@@ -23,7 +23,7 @@ class TestMiniTestUnitTestCase < Minitest::Test
   end
 
   def test_skip_does_nothing
-    skip "Do run me"
+    skip "Run tests anyway if ENV['NO_SKIP'] is set"
     raise "HELL"
   end
 
