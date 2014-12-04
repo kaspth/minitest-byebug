@@ -1,11 +1,8 @@
 #encoding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'minitest/byebug'
 
 Gem::Specification.new do |spec|
   spec.name          = "minitest-byebug"
-  spec.version       = Minitest::Byebug::VERSION
+  spec.version       = "0.0.3"
   spec.authors       = ["Kasper Timm Hansen"]
   spec.email         = ["kaspth@gmail.com"]
   spec.summary       = %q{Minitest plugin that starts a byebug session on test failures}

@@ -4,8 +4,6 @@ require 'minitest/test'
 
 # Start a byebug session when an assertion fails
 module Minitest::Byebug
-  VERSION = "0.0.2"
-
   def skip(msg = nil, bt = caller)
     super unless ENV['NO_SKIP']
   end
