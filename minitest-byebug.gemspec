@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "byebug", "~> 1.8.2"
+  spec.add_dependency "byebug"
   spec.add_dependency "minitest", "~> 5.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
